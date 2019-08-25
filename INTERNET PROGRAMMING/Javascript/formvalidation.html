@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	<style type="text/css">
+		p{
+			font-style: italic;
+			color: red;
+		}
+
+		.container
+		{
+			margin:100px;
+
+		}
+		
+	</style>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+	<script type="text/javascript">
+						
+						function validate() 
+						{
+							var uname=document.getElementById('uname').value;
+							var email=document.getElementById('email').value;
+							var password=document.getElementById('password').value;
+							var cpassword=document.getElementById('cpassword').value;
+							var unameExp=/^[a-zA-Z0-9_\.-]+$/;
+							var emailExp =/^[a-zA-Z0-9_\.-]+\@[a-zA-Z0-9-]+\.[a-zA-Z0-9\.]{3,6}$/;
+
+							if(!uname.match('unameExp') && uname=='')
+							{
+								document.getElementById('unerror').innerHTML='*** Please enter valid name ***';
+								document.getElementById('uname').focus();
+								return false;
+							}
+							else if(!email.match(emailExp)||email=='')
+							{
+
+								document.getElementById('eerror').innerHTML='*** Please enter valid email ***';
+								document.getElementById('email').focus();
+
+								return false;
+							}
+						
+							else if((password=='' || cpassword==''))
+							{
+								document.getElementById('perror').innerHTML='*** Password field is empty ***';
+								document.getElementById('cperror').innerHTML='*** Confirm Password field is empty ***';
+								document.getElementById('password').focus();
+								return false;
+							}
+							else if(password!=cpassword)
+							{
+								document.getElementById('pmatcherror').innerHTML='*** Password doesnot match ***';
+								document.getElementById('cpassword').focus();
+								return false;
+							}
+							else
+							{
+								confirm('Are you sure?');
+								return true;
+							}
+						}
+
+
+	</script>
+
+
+
+
+
+</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<h1>Sign Up Form</h1>
+							<form  onsubmit="return(validate());" method="post" action="#">
+
+								<label>User Name:</label><input type="text" name="uname" id="uname" class="form-control">
+								<p id='unerror'></p>
+								<label>Email:</label><input type="text" name="email" id="email" class="form-control">
+								<p id='eerror'></p>
+								<label>Password:</label><input type="password" name="password" id="password" class="form-control">
+								<p id='perror'></p>
+								<label>Confirm Password:</label><input type="password" name="password" id="cpassword" class="form-control" >
+								<p id='cperror'></p>
+								<p id='pmatcherror'></p>
+								<input type="submit" class="btn btn-primary" name="submit" value="submit">
+						</form>
+					</div>
+				</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+			
+			
+			
+			
+			
+			
+		
+
+
+
+
+
+
+							
+			
+		

@@ -1,0 +1,243 @@
+-Introduction
+		-Javascript is a dynamic computer programming language. 
+		-It is lightweight and most commonly used as a part of web pages, whose implementations allow client-side script to interact with the user and 	  make dynamic pages. 
+		-It is an interpreted programming language with object-oriented capabilities.
+
+-Client-side JavaScript
+		-Client-side JavaScript is the most common form of the language. 
+		-The script should be included in or referenced by an HTML document for the code to be interpreted by the browser.
+
+-Advantages of JavaScript
+
+		-Less server interaction
+		-Immediate Feedback to the users
+		-Increased Interactivity
+		-Richer Interfaces
+
+-Applications
+
+		-Error Handling
+		-Validation
+		-Animation
+		-Multimedia
+		-Debugging etc.
+
+-Top 5 Popular JavaScript Frameworks
+
+		-Node.JS
+		-Meteor.JS
+		-React.JS
+		-Ember.js
+		-Angular 2
+
+-JavaScript can be implemented using JavaScript statements that are placed within the 
+	
+	<script>... </script>
+
+	Syntax:
+
+	<script type="text/javascript">
+   Your code here.
+	</script>
+
+	#1 Example
+
+		<script type="text/javascript">
+         
+            document.write("Hello World!")
+         
+      </script>
+
+-Loading external js
+	
+	<script type="text/javascript" src="">  
+
+	</script>
+
+-Features
+	
+		-Whitespace and Line Breaks
+
+		-Case Sensitivity
+
+		-Comments in JavaScript
+
+			-JavaScript supports both C-style and C++-style comments
+			-Any text between a // and the end of a line is treated as a comment and is ignored by JavaScript.
+			-Any text between the characters /* and */ is treated as a comment
+
+			#2 Example
+
+			<script type="text/javascript">
+ 
+   
+			      // This is a comment. It is similar to comments in C++
+			   
+			      /*
+			      * This is a multiline comment in JavaScript
+			      * It is very similar to comments in C Programming
+			      */
+			   
+			   	  //
+			</script>
+
+
+#3 Example 
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		<script type="text/javascript">
+			var a=10;
+			var b=20;
+			var sum= a + b;
+			document.write(sum);
+
+		</script>
+		</body>
+		</html>
+
+#4 Example
+
+<html>
+
+   <head>
+   
+      <script type="text/javascript">
+       
+            function hello() 
+            {
+               alert("hello Everyone.");
+            }
+         
+      </script>
+      
+   </head>
+   
+   <body>
+      <input type="button" onclick="hello();" value="Hello" />
+   </body>
+   
+</html>
+
+
+#5 Example: External JS
+
+<html>
+
+   <head>
+      <script type="text/javascript" src="filename.js" ></script>
+   </head>
+   
+   <body>
+    <input type="button" onclick="Hello();" value="Hello" />
+    </body>
+</html>
+
+-Data types
+	-Numbers: var x=16, var y=16.5; 
+	-String: var y='this is fourth sem';
+	-Boolean: var y=true;
+	-Object: Objects use names to access its "members". In this example, person.name returns hari.
+			var x=
+			{
+				name:"hari",address:"ktm"
+			};
+
+	# Example
+
+	<script type="text/javascript">
+
+	let y='this is life';
+	var x={
+		name:"hari",address:"ktm"
+		};
+
+		var z=4;
+	console.log(typeof x,typeof y);
+
+	console.log(z);
+
+
+	var person = ["Hari", "Thapa", 46];
+
+
+
+	console.log(typeof person);
+
+</script>
+
+-Variable Scope
+
+#6 Example: External JS
+
+<html>
+   <body onload = checkscope();>
+      <script type = "text/javascript">
+       
+            var myVar = "global"; // Declare a global variable
+
+            function checkscope() 
+            {
+               var myVar = "local";  // Declare a local variable
+               document.write(myVar);
+            }
+        
+      </script>
+   </body>
+</html> 
+
+
+-Operators
+
+#7 Example: External JS
+
+		-Arithmetic Operators: + ,-, /, %, ++, --
+
+		-Comparison Operators: ==, !=, <, >, >=
+
+		-Logical (or Relational) Operators: &&, ||, !
+
+		-Assignment Operators: =, +=, *=, /=, %=
+
+		-Conditional (or ternary) Operators:
+
+
+
+		<script>
+
+		function check(num)
+		 {
+		  return (num ? "5" : "10");
+		}
+		</script>					
+		
+		<body>
+		<script>
+			
+				console.log(check(true));
+				// expected output: "$2.00"
+
+				console.log(check(false));
+				// expected output: "$10.00"
+
+				console.log(check(5));
+				// expected output: "$2.00"
+
+				</script>
+	</body>
+
+	-JS Array:
+
+		-var array_name = [item1, item2, ...];
+		-var person=[hari,34,kathmandu];
+		-var person=new array('hari','34','kathmandu');
+
+		OR
+
+		var person = [];
+		e.g.:var person=[hari,34,kathmandu];
+		

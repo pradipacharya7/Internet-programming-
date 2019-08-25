@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		p{
+			font-family: inherit;
+			font-style: italic;
+			color: red;
+		}
+	</style>
+	<title>formvalidation</title>
+	<script type="text/javascript">
+		function validation()
+		{
+			var name,email,password,gender,country;
+			name=document.getElementById('name').value;
+			email=document.getElementById('email').value;
+			password=document.getElementById('password').value;
+			gender=document.getElementById('gender').value;
+			country=document.getElementById('country').value;
+			console.log(name,email,gender,password,country);
+			
+			// if(name=='' || email=='' || password=='' || gender==''|| country=='')
+			// {
+			// 	alert('*** All field is required ***');
+			// }
+			if(name=='')
+			{
+				// alert('Name is required');
+				// name.focus();
+				document.getElementById('nerror').innerHTML='***Name is required.***'
+			}
+
+			else if(email=='')
+			{
+				// alert('email is required');
+				document.getElementById('eerror').innerHTML='***Email is required.***'
+
+			}
+
+			else if(password=='')
+			{
+				// alert('required');
+				document.getElementById('perror').innerHTML='***password is required.***'
+
+			}
+
+			
+
+		}
+	</script>
+</head>
+<body>
+<form >
+	<label>Name:</label><input type="text" name="name" id="name"><p id="nerror"></p><br>
+	<label>Email:</label><input type="email" name="email" id="email"><p id="eerror"></p><br>
+	<label>Password:</label><input type="password" name="password" id="password"><p id="perror"></p><br>
+	<label>Gender:</label>Male<input type="radio" name="gender" value="male" id="gender" checked>Female
+	<input type="radio" name="gender" value="female" id="gender"><br>
+	<label>Country:
+		<select name="country" id="country">
+			<option value="nepal" selected="">Nepal</option>
+			<option value="usa">USA</option>
+
+		</select></label><br>
+		<input type="button" onclick="validation();" value="submit">
+
+</form>
+</body>
+</html>

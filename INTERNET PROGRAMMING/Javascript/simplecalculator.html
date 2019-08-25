@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		function sum() {
+		var a,b,c,d;
+		a=document.getElementById("n1").value;
+		b=document.getElementById("n2").value;
+		d=document.getElementById('operand').value;
+
+		if (d=='+') {
+
+			c=parseFloat(a)+parseFloat(b);
+			document.getElementById('result').innerHTML=c;
+			// alert('result is'+' '+c);
+		}
+
+		else if (d=='-') {
+
+			c=parseFloat(a)-parseFloat(b);
+			// alert('result is'+' '+c);
+			document.getElementById('result').innerHTML=c;
+
+		}
+
+		else if (d=='*') {
+
+			c=parseFloat(a)*parseFloat(b);
+			// alert('result is'+' '+c);
+			document.getElementById('result').innerHTML=c;
+
+		}
+
+		else if (d=='/') {
+
+			c=parseFloat(a)/parseFloat(b);
+			// alert('result is'+' '+c);
+			document.getElementById('result').innerHTML=c;
+
+		}
+		else{
+			alert('only choose + or - or * or / ');
+		}
+
+		
+		}
+		
+	</script>
+<label>Number 1</label><input type="text" id="n1"><br>
+
+<label>Number 2</label><input type="text" id="n2"><br>
+
+<label>Operation</label><select name="operation" id="operand">
+	<option value="+" selected>+</option>
+	<option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">/</option>
+</select><br>
+<label>Result:</label><p id="result"></p>
+
+<label><input type="button" name="button" value="Calculate" onclick="sum();"> </label>
+
+
+</body>
+</html>
